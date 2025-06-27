@@ -15,16 +15,18 @@ module "argocd_prod" {
 #-------------------------------------------------------------
 
 module "argocd_dev_root" {
-  source             = "./terraform_argocd_root_eks"
-  eks_cluster_name   = "demo-dev"
-  git_source_path    = "demo-dev/applications"
+  source             = "./terraform_argocd_rooteks"
+  cluster_name   = "demo-dev"
+  git_source_path    = "eks/manifest/demo-dev/application"
   git_source_repoURL = "git@github.com:ValentinBad/argocd.git"
+  project_id    = "meta-coral-463911-c9"   
 }
 
-
 module "argocd_prod_root" {
-  source             = "./terraform_argocd_root_eks"
-  eks_cluster_name   = "demo-prod"
-  git_source_path    = "demo-prod/applications"
+  source             = "./terraform_argocd_rooteks"
+  cluster_name   = "demo-prod"
+  git_source_path    = "eks/manifest/demo-prod/application"
   git_source_repoURL = "git@github.com:ValentinBad/argocd.git"
+  project_id    = "meta-coral-463911-c9"   
+  
 }

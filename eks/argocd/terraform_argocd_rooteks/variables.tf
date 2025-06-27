@@ -3,6 +3,12 @@ variable "cluster_name" {
   type        = string
 }
 
+variable "project_id" {
+  type        = string
+  description = "Google Cloud project ID"
+}
+
+
 variable "cluster_location" {
   description = "GKE Cluster location to deploy ArgoCD"
   type        = string

@@ -10,7 +10,7 @@ spec:
     name     : in-cluster
     namespace: app1
   source:
-    path   : "HelmCharts/MyChart1"
+    path   : "eks/manifest/HelmCharts/Chart1"
     repoURL: "git@github.com:ValentinBad/argocd.git"
     targetRevision: HEAD
     helm:

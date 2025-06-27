@@ -1,9 +1,10 @@
 data "google_container_cluster" "this" {
   name     = var.cluster_name
   location = var.cluster_location
+  project  = var.project_id
 }
 
-data "google_client_config" "default" {}
+data "google_client_config" "current" {}
 
 provider "kubernetes" {
   host = "https://${data.google_container_cluster.this.endpoint}"
