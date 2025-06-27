@@ -1,0 +1,4 @@
+container:
+  image: adv4000/k8sphp:version2
+
+containerPort: 80
