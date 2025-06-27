@@ -1,0 +1,4 @@
+container:
+  image: httpd:latest
+
+containerPort: 80
