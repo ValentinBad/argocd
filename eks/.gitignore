@@ -1,7 +1,8 @@
 key/
 
-./terraform.tfstate
-./terraform.tfstate.backup
-./.terraform
-./.terraform.lock.hcl
-
+# Terraform
+argocd/terraform.tfstate
+argocd/terraform.tfstate.backup
+argocd/.terraform/
+argocd/.terraform.lock.hcl
+argocd/.keep
